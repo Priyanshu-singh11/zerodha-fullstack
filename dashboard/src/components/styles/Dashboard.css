@@ -1,0 +1,38 @@
+/* Dashboard.css */
+
+.dash-root {
+  min-height: calc(100vh - 54px);
+  background: var(--bg);
+}
+
+.dash-content {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.dash-page {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 28px 20px 60px;
+}
+
+.loader-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loader {
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255,255,255,.08);
+  border-top-color: #3d8eff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Container ────────────────────────────────────── */
+.watchlist-container {
+  background: #111722;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+/* ── Header ───────────────────────────────────────── */
+.wl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.wl-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: #eef3f9; letter-spacing: -0.1px;
+  margin: 0;
+}
+
+.wl-subtitle {
+  font-size: 11px; color: #46607a;
+  margin-top: 2px; margin-bottom: 0;
+}
+
+.wl-refresh-btn {
+  background: #1f2b3e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: #728ea4;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 15px;
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+.wl-refresh-btn:hover { background: #28374f; color: #eef3f9; }
+
+/* ── Summary strip ────────────────────────────────── */
+.wl-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.wl-summary-card {
+  padding: 8px 12px;
+  display: flex; flex-direction: column; gap: 2px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+.wl-summary-card:last-child { border-right: none; }
+
+.wl-summary-card span {
+  font-size: 9px; color: #46607a;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  font-weight: 600; font-family: 'Inter', sans-serif;
+}
+.wl-summary-card strong {
+  font-size: 12px; font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; color: #eef3f9;
+}
+
+/* ── Search ───────────────────────────────────────── */
+.wl-search { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.wl-search input {
+  width: 100%; height: 32px;
+  background: #0c1018;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #eef3f9; font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.12s;
+}
+.wl-search input:focus       { border-color: #3d8eff; }
+.wl-search input::placeholder { color: #46607a; }
+
+/* ── Empty ────────────────────────────────────────── */
+.wl-empty {
+  padding: 28px;
+  text-align: center;
+  color: #46607a;
+  font-size: 12px;
+}
+
+/* ── Stock list ───────────────────────────────────── */
+.wl-list {
+  display: flex;
+  flex-direction: column;
+  /* scrollable if many stocks */
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #28374f transparent;
+}
+.wl-list::-webkit-scrollbar       { width: 3px; }
+.wl-list::-webkit-scrollbar-thumb { background: #28374f; border-radius: 4px; }
+
+/* ── Item — THE CRITICAL FIX ──────────────────────── */
+.wl-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;            /* FIX: needed for absolute actions */
+  cursor: pointer;
+  transition: background 0.12s;
+  min-height: 52px;
+}
+.wl-item:last-child { border-bottom: none; }
+.wl-item:hover      { background: #182030; }
+
+/* left — symbol + exchange */
+.wl-item-left { display: flex; flex-direction: column; gap: 2px; }
+
+.wl-symbol-wrap { display: flex; align-items: center; gap: 5px; }
+
+.wl-symbol {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px; font-weight: 700; color: #eef3f9;
+}
+
+.wl-exchange {
+  font-size: 8px; color: #46607a;
+  background: #1f2b3e;
+  padding: 1px 4px; border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600; letter-spacing: 0.3px;
+}
+
+/* right — price + change */
+.wl-item-right {
+  display: flex; flex-direction: column;
+  align-items: flex-end; gap: 1px;
+}
+
+.wl-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; font-weight: 700;
+}
+
+.wl-change {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; font-weight: 600;
+}
+
+/* ── Action buttons — FIX: proper absolute overlay ── */
+.wl-item-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 10px;
+  background: linear-gradient(to right, transparent 0%, #182030 30%);
+  border-radius: 0;
+  animation: fadeInActions 0.1s ease;
+}
+
+@keyframes fadeInActions {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.wl-action-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px; font-weight: 700;
+  transition: opacity 0.1s;
+  white-space: nowrap;
+}
+.wl-action-btn:hover { opacity: 0.82; }
+
+.wl-action-btn.buy {
+  background: rgba(16,212,142,0.12);
+  color: #10d48e;
+  border: 1px solid rgba(16,212,142,0.22);
+}
+.wl-action-btn.buy:hover { background: rgba(16,212,142,0.2); }
+
+.wl-action-btn.sell {
+  background: rgba(255,69,96,0.12);
+  color: #ff4560;
+  border: 1px solid rgba(255,69,96,0.22);
+}
+.wl-action-btn.sell:hover { background: rgba(255,69,96,0.2); }
+
+/* chart icon btn */
+.wl-action-btn:not(.buy):not(.sell) {
+  background: #1f2b3e;
+  color: #728ea4;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  padding: 4px 7px;
+}
+.wl-action-btn:not(.buy):not(.sell):hover { background: #28374f; color: #eef3f9; }
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 600px) {
+  /* On mobile the watchlist is a strip — horizontal scroll */
+  .watchlist-container {
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  .wl-list {
+    max-height: none;      /* show all on mobile */
+  }
+
+  /* Action buttons: on mobile show at BOTTOM of screen as sheet */
+  .wl-item-actions {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    background: #111722;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px 14px 0 0;
+    padding: 14px 20px;
+    gap: 10px;
+    z-index: 300;
+    justify-content: center;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.4);
+    animation: slideUp 0.2s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);   opacity: 1; }
+  }
+
+  .wl-action-btn {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 13px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .wl-summary { grid-template-columns: repeat(2, 1fr); }
+}

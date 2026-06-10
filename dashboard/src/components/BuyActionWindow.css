@@ -1,0 +1,136 @@
+.buy-window {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, 94vw);
+  background: #161d2b;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  z-index: 9999;
+  overflow: hidden;
+  cursor: move;
+}
+
+.bw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #1e2736;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.bw-title {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+}
+
+.bw-subtitle {
+  color: #64748b;
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+.bw-close {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+}
+
+.bw-close:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+.bw-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bw-inputs {
+  display: flex;
+  gap: 12px;
+}
+
+.bw-field {
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 12px 8px;
+}
+
+.bw-field legend {
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0 4px;
+}
+
+.bw-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 2px 0;
+}
+
+.bw-margin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.bw-margin-val {
+  color: #f1f5f9;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.bw-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.bw-btn {
+  flex: 1;
+  padding: 11px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+.bw-btn:hover { opacity: 0.85; }
+
+.bw-buy    { background: #22c55e; color: #fff; }
+.bw-sell   { background: #ef4444; color: #fff; }
+.bw-cancel { background: #1e2736; color: #94a3b8; border: 1px solid rgba(255,255,255,.08); }
+
+@media (max-width: 480px) {
+  .bw-inputs { flex-direction: column; }
+}
