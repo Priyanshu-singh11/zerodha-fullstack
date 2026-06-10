@@ -1,0 +1,163 @@
+/* Base Section */
+.brokerage-section {
+  background-color: #0e1117;
+  padding: 4rem 1rem;
+  max-width: 1024px;
+  margin: 2rem auto;
+  color: #f0f6fc;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Headings */
+.brokerage-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.brokerage-subtitle {
+  font-size: 1rem;
+  color: #a1a1aa;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Tabs */
+.brokerage-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.brokerage-tab {
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  background-color: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brokerage-tab.active,
+.brokerage-tab:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Table */
+.brokerage-table {
+  min-width: 600px;
+}
+
+/* Header and Rows */
+.brokerage-table-header,
+.brokerage-table-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  border-bottom: 1px solid #2a2f3c;
+}
+
+/* Header Style */
+.brokerage-table-header {
+  background-color: #161b22;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Labels and Cells */
+.brokerage-label {
+  background-color: #111218;
+  font-weight: 600;
+  padding: 0.9rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.header-cell,
+.table-cell {
+  padding: 0.9rem 1rem;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.95rem;
+}
+
+.brokerage-table-row {
+  background-color: #1e222a;
+  transition: background 0.3s ease;
+}
+
+.brokerage-table-row:hover {
+  background-color: #252a33;
+}
+
+.empty {
+  background-color: #161b22;
+}
+
+/* Link */
+.brokerage-link {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.brokerage-link a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.brokerage-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .brokerage-section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brokerage-title {
+    font-size: 2rem;
+  }
+
+  .brokerage-tab {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .header-cell,
+  .table-cell,
+  .brokerage-label {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brokerage-title {
+    font-size: 1.8rem;
+  }
+
+  .brokerage-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .brokerage-tab {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

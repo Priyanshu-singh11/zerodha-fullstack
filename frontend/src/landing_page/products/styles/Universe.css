@@ -1,0 +1,135 @@
+:root {
+  --accent: #3b82f6;
+  --text-main: #f0f6fc;
+  --text-sub: #8b949e;
+  --bg: #0e1117;
+}
+
+.universe-section {
+  padding: 4rem 1rem;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.universe-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.universe-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.universe-subtext {
+  font-size: 1.1rem;
+  color: var(--text-sub);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.universe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.universe-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.universe-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.universe-logo {
+  width: 72px;
+  height: 72px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.universe-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.universe-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.universe-card p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.5;
+}
+.universe-container button {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto;
+  font-family: 'DM Sans', sans-serif;
+  background-color: white;
+  color: #111218;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+   border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+a{
+  text-decoration: none;
+}
+
+.universe-container button:hover {
+  background-color: #111218;
+  color: white;
+  border: 1px solid white;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .universe-heading {
+    font-size: 2rem;
+  }
+
+  .universe-subtext {
+    font-size: 1rem;
+  }
+
+  .universe-card {
+    padding: 1.2rem;
+  }
+
+  .universe-card p {
+    font-size: 0.9rem;
+  }
+}

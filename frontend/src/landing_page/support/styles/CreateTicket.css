@@ -1,0 +1,131 @@
+.ticket-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  background-color: #0e1117;
+  color: #f0f6fc;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.ticket-title {
+  font-size: 1.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  color: #3b82f6;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.ticket-icon {
+  font-size: 1.6rem;
+}
+
+/* Grid Layout */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card */
+.ticket-card {
+  /* background-color: #161b22; */
+
+  padding: 1.2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-card:hover {
+  background-color: #1e2735;
+}
+
+/* Heading */
+.ticket-heading-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.ticket-heading-link:hover {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.heading-icon {
+  color: #3b82f6;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Link list */
+.ticket-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ticket-link {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.ticket-link:hover {
+  color: #3b82f6;
+}
+
+.link-icon {
+  font-size: 0.75rem;
+  color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticket-title {
+    font-size: 1.6rem;
+  }
+
+  .ticket-heading-link {
+    font-size: 1.05rem;
+  }
+
+  .ticket-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-title {
+    font-size: 1.4rem;
+  }
+
+  .ticket-heading-link {
+    font-size: 1rem;
+  }
+
+  .ticket-link {
+    font-size: 0.85rem;
+  }
+}

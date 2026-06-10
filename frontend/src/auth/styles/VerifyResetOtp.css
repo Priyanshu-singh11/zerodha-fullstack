@@ -1,0 +1,329 @@
+/* VerifyResetOtp.css — dark theme */
+
+.vro-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1117;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vro-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(120px);
+}
+.vro-glow.glow-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(59, 130, 246, 0.08);
+  top: -120px;
+  left: -120px;
+}
+.vro-glow.glow-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(34, 197, 94, 0.06);
+  bottom: -80px;
+  right: -80px;
+}
+
+.vro-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  min-height: 540px;
+  background: #161d2b;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* LEFT */
+.vro-left {
+  width: 340px;
+  flex-shrink: 0;
+  background: #0d1117;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vro-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vro-logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+.vro-logo .dot {
+  color: #22c55e;
+}
+.vro-brand-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.vro-left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.vro-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.vro-envelope-icon {
+  color: #3b82f6;
+  font-size: 1.4rem;
+}
+
+.vro-left-content h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+
+.vro-left-content p {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0;
+}
+.vro-left-content p strong {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.vro-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vro-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #1e2736;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
+.vro-badge .badge-val {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+.vro-badge .badge-val.green {
+  color: #22c55e;
+}
+.vro-badge .badge-label {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+/* RIGHT */
+.vro-right {
+  flex: 1;
+  padding: 52px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vro-form-header {
+  margin-bottom: 36px;
+}
+.vro-form-header h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+.vro-form-header p {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+}
+.vro-form-header p strong {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.vro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vro-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vro-input-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* OTP input */
+.vro-otp-input {
+  width: 100%;
+  padding: 18px 20px;
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  text-align: center;
+  letter-spacing: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'Courier New', monospace;
+}
+.vro-otp-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+.vro-otp-input::placeholder {
+  color: #273346;
+  letter-spacing: 12px;
+  font-size: 1.8rem;
+}
+
+/* Progress dots */
+.vro-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.vro-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1e2736;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s, border-color 0.2s;
+}
+.vro-dot.filled {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Resend */
+.vro-resend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  color: #64748b;
+}
+.vro-resend-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3b82f6;
+  font-size: 0.83rem;
+  font-weight: 700;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+.vro-resend-btn:hover:not(:disabled) {
+  color: #60a5fa;
+}
+.vro-resend-btn:disabled {
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* Button */
+.vro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.93rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+.vro-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+.vro-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.vro-footer {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+.vro-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.vro-back:hover {
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .vro-card { flex-direction: column; }
+  .vro-left {
+    width: 100%;
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .vro-left-content h1 { font-size: 1.7rem; }
+  .vro-badges { flex-direction: row; }
+  .vro-badge { flex: 1; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .vro-right { padding: 32px 24px; }
+  .vro-otp-input { font-size: 1.6rem; letter-spacing: 10px; }
+}

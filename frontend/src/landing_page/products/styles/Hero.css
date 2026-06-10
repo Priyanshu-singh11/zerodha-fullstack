@@ -1,0 +1,60 @@
+
+:root {
+  --primary-bg: #0e1117;
+  --accent: #3b82f6;
+  --text-main: #f0f6fc;
+  --text-sub: #8b949e;
+}
+
+.hero-section {
+  background: var(--primary-bg);
+  color: var(--text-main);
+  padding: 5rem 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 5rem auto;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.product-hero-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1.25rem;
+  color: var(--text-sub);
+  margin-bottom: 2rem;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.hero-link-text {
+  font-size: 1.1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.hero-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+
+  .hero-link-text {
+    font-size: 1rem;
+  }
+}

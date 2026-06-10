@@ -1,0 +1,91 @@
+/* Hero.css */
+
+:root {
+  --primary-bg: #0e1117;
+  --section-bg: #161b22;
+  --accent-blue: #3b82f6;
+  --headline-text: #f0f6fc;
+  --subtext-gray: #8b949e;
+}
+
+.hero-section {
+  background-color: var(--primary-bg);
+  color: var(--headline-text);
+  padding: 4rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+.hero-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--headline-text);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1 1 400px;
+  font-family: 'Urbanist', sans-serif;
+  color: var(--subtext-gray);
+  line-height: 1.6;
+}
+
+
+
+.hero-left ul li a {
+  color: var(--headline-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.hero-left ul li a:hover {
+  color: var(--accent-blue);
+}
+
+.hero-left p,
+.hero-right p {
+  margin-bottom: 1.2rem;
+}
+
+.hero-right a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  margin: 0 0.25rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .hero-heading {
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-heading {
+    font-size: 1.2rem;
+  }
+}

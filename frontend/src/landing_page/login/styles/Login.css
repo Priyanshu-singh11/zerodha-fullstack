@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Urbanist:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+    background:#0b0f19;
+}
+
+/* PAGE */
+
+.login-page{
+    min-height:100vh;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:2rem;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(59,130,246,0.15),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(168,85,247,0.15),
+    transparent 25%),
+
+    #0b0f19;
+}
+
+/* BLUR EFFECTS */
+
+.bg-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:0;
+}
+
+.bg-circle.one{
+    width:320px;
+    height:320px;
+
+    background:#2563eb;
+
+    top:-100px;
+    left:-100px;
+}
+
+.bg-circle.two{
+    width:320px;
+    height:320px;
+
+    background:#9333ea;
+
+    bottom:-120px;
+    right:-100px;
+}
+
+/* MAIN CARD */
+
+.login-container{
+    width:100%;
+    max-width:1024px;
+
+    min-height:650px;
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+
+    z-index:2;
+}
+
+/* LEFT */
+
+.login-left{
+    flex:1;
+
+    padding:4rem;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.02)
+    );
+}
+
+.tag{
+    width:fit-content;
+
+    padding:0.6rem 1rem;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:#93c5fd;
+
+    font-size:0.8rem;
+    letter-spacing:1px;
+
+    font-family:"DM Sans";
+
+    margin-bottom:2rem;
+}
+
+.login-left h1{
+    font-size:4rem;
+    line-height:1.1;
+
+    color:white;
+
+    font-family:"Space Grotesk";
+
+    margin-bottom:1.5rem;
+}
+
+.login-left p{
+    max-width:420px;
+
+    color:#a1a1aa;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+    font-family:"Urbanist";
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:1rem;
+
+    margin-top:3rem;
+}
+
+.stat-box{
+    padding:1rem 1.4rem;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    min-width:120px;
+
+    transition:0.3s ease;
+}
+
+.stat-box h3{
+    color:white;
+
+    font-size:1.5rem;
+
+    font-family:"Space Grotesk";
+}
+
+.stat-box span{
+    color:#a1a1aa;
+
+    font-family:"Urbanist";
+}
+
+/* RIGHT */
+
+.login-right{
+    width:450px;
+
+    padding:4rem;
+
+    background:
+    rgba(12,14,22,0.82);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* FORM TOP */
+
+.form-top{
+    margin-bottom:2rem;
+}
+
+.form-top h2{
+    color:white;
+
+    font-size:2.3rem;
+
+    font-family:"Space Grotesk";
+
+    margin-bottom:0.5rem;
+}
+
+.form-top p{
+    color:#9ca3af;
+
+    font-family:"Urbanist";
+}
+
+/* FORM */
+
+.login-form{
+    display:flex;
+    flex-direction:column;
+    gap:1.3rem;
+}
+
+/* INPUTS */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:0.7rem;
+}
+
+.input-group label{
+    color:#d4d4d8;
+
+    font-size:0.95rem;
+
+    font-family:"DM Sans";
+}
+
+.input-group input{
+    width:100%;
+    height:58px;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    padding:0 1.2rem;
+
+    background:#181c27;
+
+    color:white;
+
+    font-size:1rem;
+
+    border:1px solid transparent;
+
+    font-family:"Urbanist";
+
+    transition:0.3s ease;
+}
+
+.input-group input:focus{
+    border-color:#3b82f6;
+
+    box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15);
+}
+
+/* PASSWORD */
+
+.password-box{
+    position:relative;
+}
+
+.eye{
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#9ca3af;
+
+    cursor:pointer;
+}
+
+/* OPTIONS */
+
+.form-options{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:1rem;
+}
+
+/* REMEMBER */
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+
+    cursor:pointer;
+
+    color:#a1a1aa;
+
+    font-size:0.95rem;
+
+    font-family:"Urbanist";
+}
+
+.remember input{
+    width:16px;
+    height:16px;
+
+    accent-color:#3b82f6;
+
+    cursor:pointer;
+}
+
+/* FORGOT */
+
+.forgot{
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    font-size:0.95rem;
+
+    font-family:"DM Sans";
+
+    transition:0.3s ease;
+}
+
+.forgot:hover{
+    color:#93c5fd;
+}
+
+/* BUTTON */
+
+.login-btn{
+    margin-top:0.5rem;
+
+    height:58px;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        to right,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    font-family:"DM Sans";
+
+    transition:0.3s ease;
+}
+
+.login-btn:hover{
+    box-shadow:
+    0 15px 30px rgba(37,99,235,0.35);
+}
+
+/* BOTTOM */
+
+.bottom-text{
+    margin-top:2rem;
+
+    text-align:center;
+
+    color:#9ca3af;
+
+    font-family:"Urbanist";
+}
+
+.bottom-text a{
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    margin-left:0.3rem;
+
+    font-weight:600;
+}
+
+.bottom-text a:hover{
+    color:#93c5fd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .login-container{
+        flex-direction:column;
+        max-width:520px;
+    }
+
+    .login-left{
+        padding:3rem 2rem;
+    }
+
+    .login-right{
+        width:100%;
+        padding:3rem 2rem;
+    }
+
+    .login-left h1{
+        font-size:3rem;
+    }
+}
+
+@media(max-width:600px){
+
+    .login-page{
+        padding:1rem;
+    }
+
+    .login-container{
+        border-radius:24px;
+    }
+
+    .login-left,
+    .login-right{
+        padding:2rem 1.5rem;
+    }
+
+    .login-left h1{
+        font-size:2.4rem;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+
+    .form-top h2{
+        font-size:2rem;
+    }
+
+    .input-group input,
+    .login-btn{
+        height:54px;
+    }
+
+    .form-options{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0.8rem;
+    }
+}

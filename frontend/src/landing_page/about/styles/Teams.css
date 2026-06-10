@@ -1,0 +1,124 @@
+
+
+:root {
+  --primary-bg: #0e1117;
+  --card-bg: #161b22;
+  --accent: #3b82f6;
+  --text-main: #f0f6fc;
+  --text-sub: #8b949e;
+  --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-grid-section {
+  background: var(--primary-bg);
+  color: var(--text-main);
+  padding: 4rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+}
+
+.team-grid-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.team-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--light-shadow);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+}
+
+.team-card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--accent);
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.team-role {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.accordion-toggle {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #2563eb;
+}
+
+.team-bio {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-sub);
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0.75rem;
+  font-family: 'Urbanist', sans-serif;
+  text-align: left;
+  overflow: hidden;
+  will-change: height, opacity;
+  transform-origin: top;
+}
+
+@media (max-width: 768px) {
+  .team-grid-title {
+    font-size: 2rem;
+  }
+  .team-card-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-toggle {
+    width: 100%;
+    padding: 0.6rem;
+  }
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+  .team-bio {
+    font-size: 0.95rem;
+  }
+} 

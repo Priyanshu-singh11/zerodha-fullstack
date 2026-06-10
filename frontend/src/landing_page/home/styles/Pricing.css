@@ -1,0 +1,117 @@
+/* Main Pricing Section */
+.pricing-section {
+  background-color: #0e1117;
+  padding: 4rem 1.5rem;
+  color: #f0f6fc;
+  font-family: 'Urbanist', sans-serif;
+  margin: 4rem 0;
+}
+
+/* Container (row layout desktop, column on mobile) */
+.pricing-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* LEFT SECTION */
+.pricing-left {
+  flex: 1 1 45%;
+}
+
+.pricing-left h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.pricing-left p {
+  color: #8b949e;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.pricing-left a {
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.pricing-left a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* RIGHT SECTION */
+.pricing-right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Price Card */
+.price-box {
+  flex: 1 1 45%;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  min-width: 240px;
+}
+
+.price-box:hover {
+  transform: translateY(-6px);
+}
+
+.price-box h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+}
+
+.price-box p {
+  font-size: 1rem;
+  color: #8b949e;
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.6;
+}
+
+/* Responsive: Stack layout on mobile */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pricing-left,
+  .pricing-right {
+    width: 100%;
+  }
+
+  .pricing-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-box {
+    width: 100%;
+  }
+}

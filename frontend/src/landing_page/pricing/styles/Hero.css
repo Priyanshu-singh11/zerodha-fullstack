@@ -1,0 +1,94 @@
+:root {
+  --bg-dark: #0e1117;
+  --bg-box: #161b22;
+  --text-light: #f0f6fc;
+  --text-sub: #8b949e;
+  --accent: #3b82f6;
+  --white: #ffffff;
+  --border: #2f2f2f;
+}
+
+.pricing-section {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 4rem 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.pricing-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.pricing-subtext {
+  font-size: 1.1rem;
+  color: var(--text-sub);
+  margin-bottom: 3rem;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.pricing-box {
+  flex: 1;
+  min-width: 260px;
+  padding: 2rem;
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+
+.price-value {
+  display: flex;
+  align-items: baseline;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.rs-icon {
+  font-size: 1.1rem;
+  margin-right: 0.25rem;
+  vertical-align: top;
+}
+
+.pricing-box h3 {
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-box p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-title {
+    font-size: 2rem;
+  }
+
+  .pricing-box {
+    width: 100%;
+  }
+}

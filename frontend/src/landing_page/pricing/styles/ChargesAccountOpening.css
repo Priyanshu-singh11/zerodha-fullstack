@@ -1,0 +1,70 @@
+.account-charges-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 3rem 1rem;
+  background-color: #0e1117;
+  color: #f0f6fc;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.charges-account-heading {
+  font-size: 2.3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.table-wrapper {
+  margin-bottom: 3rem;
+}
+
+.table-title {
+  font-size: 1.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 0.8rem;
+  color: #e4e4e7;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Urbanist', sans-serif;
+  background-color: #161b22;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 400px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.styled-table th {
+  background-color: #1c1f26;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+.styled-table td {
+  border-bottom: 1px solid #2c2f36;
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .account-heading {
+    font-size: 1.7rem;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    font-size: 0.9rem;
+  }
+}

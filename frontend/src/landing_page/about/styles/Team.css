@@ -1,0 +1,114 @@
+/* Team.css */
+
+:root {
+  --primary-bg: #0e1117;
+  --section-bg: #161b22;
+  --accent-blue: #3b82f6;
+  --headline-text: #f0f6fc;
+  --subtext-gray: #8b949e;
+}
+
+.team-section {
+  background-color: var(--primary-bg);
+  color: var(--headline-text);
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+}
+
+.team-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--headline-text);
+}
+
+.team-content {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team-left {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.team-image {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.4); /* subtle blue glow */
+  border: 2px solid var(--accent-blue);
+  background-color: #fff; /* optional: improves contrast if image has transparency */
+}
+.team-image {
+  filter: contrast(110%) saturate(120%);
+}
+
+
+.team-left h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.team-role {
+  color: var(--subtext-gray);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+.team-right {
+  flex: 1 1 500px;
+  font-family: 'Urbanist', sans-serif;
+  color: var(--subtext-gray);
+  line-height: 1.6;
+}
+
+.team-right p {
+  margin-bottom: 1.2rem;
+}
+
+.team-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.team-links span {
+  color: var(--headline-text);
+  font-weight: 600;
+}
+
+.team-links a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .team-content {
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .team-right {
+    text-align: center;
+  }
+
+  .team-image {
+    width: 200px;
+    height: 200px;
+  }
+}

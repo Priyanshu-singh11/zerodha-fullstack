@@ -1,0 +1,98 @@
+
+.award-section {
+  width: 100%;
+  background: rgba(22, 27, 34, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-section:hover {
+  transform: translateY(-6px);
+}
+
+
+.award-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+
+
+
+.award-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trophy-icon {
+  width: 250px;
+  height: 250px;
+  stroke: #3b82f6;
+  fill: none;
+}
+
+.award-content {
+  flex: 2 1 400px;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+.award-content h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.award-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.benefits {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.benefits ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  color: #a1a1aa;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+
+/* Responsive */
+@media (max-width: 790px) {
+
+  .award-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .award-content {
+    padding-top: 1rem;
+  }
+
+  .benefits {
+    justify-content: center;
+  }
+
+}

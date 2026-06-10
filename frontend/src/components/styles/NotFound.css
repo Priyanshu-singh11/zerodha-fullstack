@@ -1,0 +1,78 @@
+:root {
+  --primary-bg: #0e1117;
+  --section-bg: #161b22;
+  --accent-blue: #3b82f6;
+  --headline-text: #f0f6fc;
+  --subtext-gray: #8b949e;
+  --button-bg: #1f2937;
+  --button-hover: #374151;
+}
+
+.notfound-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--primary-bg);
+  color: var(--headline-text);
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.notfound-content {
+  max-width: 500px;
+}
+
+.notfound-graphic {
+  margin-bottom: 2rem;
+}
+
+.notfound-icon {
+  width: 120px;
+  height: 120px;
+  stroke: var(--accent-blue);
+  opacity: 0.8;
+}
+
+.notfound-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent-blue);
+}
+
+.notfound-text {
+  font-size: 1.2rem;
+  color: var(--subtext-gray);
+  margin: 1rem 0 2rem;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.notfound-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-bg);
+  color: var(--headline-text);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.notfound-button:hover {
+  background-color: var(--button-hover);
+}
+
+@media (max-width: 768px) {
+  .notfound-title {
+    font-size: 3.5rem;
+  }
+
+  .notfound-icon {
+    width: 90px;
+    height: 90px;
+  }
+}

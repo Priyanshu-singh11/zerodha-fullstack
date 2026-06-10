@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Urbanist:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --bg:#0b0f19;
+    --card:#131926;
+    --border:rgba(255,255,255,0.08);
+    --text:#ffffff;
+    --muted:#9ca3af;
+    --blue:#3b82f6;
+}
+
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    overflow-x:hidden;
+}
+
+/* PAGE */
+
+.signup-page{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:2rem;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(59,130,246,0.15),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(147,51,234,0.15),
+    transparent 25%),
+
+    var(--bg);
+}
+
+/* BLUR EFFECT */
+
+.blur-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:0;
+}
+
+.blur-circle.one{
+    width:320px;
+    height:320px;
+    background:#2563eb;
+
+    top:-100px;
+    left:-100px;
+}
+
+.blur-circle.two{
+    width:320px;
+    height:320px;
+    background:#9333ea;
+
+    bottom:-120px;
+    right:-100px;
+}
+
+/* CONTAINER */
+
+.signup-container{
+    width:100%;
+    max-width:1024px;
+
+    display:flex;
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid var(--border);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+
+    z-index:2;
+}
+
+/* LEFT */
+
+.signup-left{
+    flex:1;
+
+    padding:4rem;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.mini-tag{
+    width:fit-content;
+
+    padding:0.6rem 1rem;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:1px solid var(--border);
+
+    color:#93c5fd;
+
+    font-size:0.8rem;
+    letter-spacing:1px;
+
+    font-family:"DM Sans";
+
+    margin-bottom:2rem;
+}
+
+.signup-left h1{
+    font-size:4rem;
+    line-height:1.1;
+
+    color:var(--text);
+
+    font-family:"Space Grotesk";
+
+    margin-bottom:1.5rem;
+}
+
+.signup-left p{
+    max-width:420px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-family:"Urbanist";
+}
+
+/* FEATURES */
+
+.feature-list{
+    display:flex;
+    gap:1rem;
+
+    margin-top:3rem;
+}
+
+.feature-card{
+    min-width:130px;
+
+    padding:1rem 1.4rem;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    border:1px solid var(--border);
+}
+
+.feature-card h3{
+    color:white;
+
+    font-size:1.5rem;
+
+    font-family:"Space Grotesk";
+}
+
+.feature-card span{
+    color:var(--muted);
+
+    font-family:"Urbanist";
+}
+
+/* RIGHT */
+
+.signup-right{
+    width:450px;
+
+    padding:4rem;
+
+    background:
+    rgba(12,14,22,0.82);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.form-top{
+    margin-bottom:2rem;
+}
+
+.form-top h2{
+    font-size:2.2rem;
+
+    color:white;
+
+    font-family:"Space Grotesk";
+
+    margin-bottom:0.5rem;
+}
+
+.form-top p{
+    color:var(--muted);
+
+    font-family:"Urbanist";
+}
+
+/* FORM */
+
+.signup-form{
+    display:flex;
+    flex-direction:column;
+    gap:1.3rem;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:0.7rem;
+}
+
+.input-group label{
+    color:#d4d4d8;
+
+    font-size:0.95rem;
+
+    font-family:"DM Sans";
+}
+
+.input-group input{
+    width:100%;
+    height:58px;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    padding:0 1.2rem;
+
+    background:#181c27;
+
+    color:white;
+
+    font-size:1rem;
+
+    border:1px solid transparent;
+
+    font-family:"Urbanist";
+
+    transition:0.3s ease;
+}
+
+.input-group input:focus{
+    border-color:var(--blue);
+
+    box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15);
+}
+
+.password-box{
+    position:relative;
+}
+
+.eye-icon{
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#9ca3af;
+
+    cursor:pointer;
+}
+
+/* BUTTON */
+
+.signup-btn{
+    margin-top:0.5rem;
+
+    height:58px;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        to right,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.7rem;
+
+    font-family:"DM Sans";
+
+    transition:0.3s ease;
+}
+
+.signup-btn:hover{
+    box-shadow:
+    0 15px 30px rgba(37,99,235,0.3);
+}
+
+/* BOTTOM */
+
+.bottom-text{
+    margin-top:2rem;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-family:"Urbanist";
+}
+
+.bottom-text span{
+    color:#60a5fa;
+    font-weight:600;
+    cursor:pointer;
+    
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .signup-container{
+        flex-direction:column;
+        max-width:520px;
+    }
+
+    .signup-left{
+        padding:3rem 2rem;
+    }
+
+    .signup-right{
+        width:100%;
+        padding:3rem 2rem;
+    }
+
+    .signup-left h1{
+        font-size:3rem;
+    }
+}
+
+@media(max-width:600px){
+
+    .signup-page{
+        padding:1rem;
+    }
+
+    .signup-container{
+        border-radius:24px;
+    }
+
+    .signup-left,
+    .signup-right{
+        padding:2rem 1.5rem;
+    }
+
+    .signup-left h1{
+        font-size:2.4rem;
+    }
+
+    .feature-list{
+        flex-direction:column;
+    }
+
+    .form-top h2{
+        font-size:2rem;
+    }
+
+    .input-group input,
+    .signup-btn{
+        height:54px;
+    }
+}
