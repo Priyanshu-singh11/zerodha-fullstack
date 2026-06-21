@@ -23,7 +23,7 @@ Built on the **MERN stack** with a strong focus on secure API routing, robust st
 <div align="center">
 
 <!-- Replace with a real screenshot of your dashboard -->
-<img src="https://placehold.co/900x450/387ED1/ffffff?text=Zerodha+Clone+%E2%80%94+Screenshot+Goes+Here" alt="Zerodha Clone preview" width="85%" />
+<img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000b4cc720ba06db8a62f0e29e4&ts=495012&p=fsns&cid=1&sig=f5e9c24c4294b845bcf3a9d1a8325d75905c19dcef2824f9582daab05d75b1df&v=0" alt="Zerodha Clone preview" width="85%" />
 
 </div>
 
