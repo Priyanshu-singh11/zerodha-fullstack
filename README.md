@@ -175,7 +175,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Made with ❤️ by **[Your Name](https://github.com/your-username)**
+Made with ❤️ by **me (https://github.com/your-username)**
 
  If you like this project, consider giving it a star!
 
