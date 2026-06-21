@@ -167,15 +167,11 @@ Contributions, issues, and feature requests are welcome!
 
 
 
-##  License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 <div align="center">
 
-Made with ❤️ by **me (https://github.com/your-username)**
+Made with ❤️ by **me**
 
  If you like this project, consider giving it a star!
 
