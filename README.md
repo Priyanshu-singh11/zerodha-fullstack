@@ -23,7 +23,7 @@ Built on the **MERN stack** with a strong focus on secure API routing, robust st
 <div align="center">
 
 <!-- Replace with a real screenshot of your dashboard -->
-<img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000b4cc720ba06db8a62f0e29e4&ts=495012&p=fsns&cid=1&sig=f5e9c24c4294b845bcf3a9d1a8325d75905c19dcef2824f9582daab05d75b1df&v=0" alt="Zerodha Clone preview" width="85%" />
+<img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000b94c720b98522edbae932362&ts=495012&p=fs&cid=1&sig=10c1c92448949aaf86cbca1c7a7685e5476ad8e6566d8ff744e7cbf3f0864f06&v=0" alt="Zerodha Clone preview" width="85%" />
 
 </div>
 
