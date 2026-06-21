@@ -149,7 +149,7 @@ VITE_API_BASE_URL=http://localhost:5000/api
 npm run dev
 ```
 
-Visit **`http://localhost:5173`** (or your configured port) in your browser. 🎉
+
 
 ---
 
