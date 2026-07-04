@@ -153,7 +153,7 @@ cp .env.example .env
 Fill in your frontend `.env`:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
 ```bash
