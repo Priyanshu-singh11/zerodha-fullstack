@@ -112,20 +112,31 @@ cp .env.example .env
 
 Fill in your backend `.env`:
 
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-COOKIE_EXPIRES=7
-NODE_ENV=development
+## Environment Variables
 
-# Nodemailer / SMTP config
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your_email@gmail.com
-SMTP_PASS=your_app_password
-EMAIL_FROM="Zerodha Clone <no-reply@zerodhaclone.com>"
+Create a `.env` file inside the `backend` directory and add the following variables:
+
+```env
+PORT=4000
+
+# Database
+MONGO_URL=your_mongodb_connection_string
+
+# JWT
+JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_jwt_refresh_secret
+
+# Google OAuth & Email
+GOOGLE_USER=your_email@gmail.com
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_REFRESH_TOKEN=your_google_refresh_token
+
+# Frontend URLs
+REACT_APP_DASHBOARD_URL=http://localhost:3001
+CLIENT_URL=http://localhost:3000
 ```
+
 
 ```bash
 npm run dev
