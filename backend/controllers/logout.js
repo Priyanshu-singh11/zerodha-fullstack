@@ -23,7 +23,7 @@ const logout = async (req, res) => {
       sameSite: "strict",
     };
 
-    // Clear BOTH cookies (accessToken + refreshToken)
+    
     res.clearCookie("accessToken", cookieOptions);
     res.clearCookie("refreshToken", cookieOptions);
 
