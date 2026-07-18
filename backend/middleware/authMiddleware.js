@@ -3,7 +3,7 @@ const Usermodel = require("../model/Usermodel");
 
 const authMiddleware = async (req, res, next) => {
   try {
-    // Must match the cookie name set in login/verifyOtp
+  
     const token = req.cookies.accessToken;
 
     if (!token) {
