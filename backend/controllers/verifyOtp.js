@@ -55,21 +55,20 @@ const verifyOtp = async (req, res) => {
       });
     }
 
-    // Mark user as verified
     user.verified = true;
     await user.save();
 
-    // Clean up OTPs
+ 
     await Otpmodel.deleteMany({
       user: user._id,
       purpose: "email_verification",
     });
 
-    // Generate tokens
+ 
     const accessToken = generateAccessToken({ id: user._id });
     const refreshToken = generateRefreshToken({ id: user._id });
 
-    // Hash the refresh token and save session
+
     const refreshTokenHash = crypto
       .createHash("sha256")
       .update(refreshToken)
@@ -88,14 +87,14 @@ const verifyOtp = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 15 * 60 * 1000, // 15 minutes
+      maxAge: 15 * 60 * 1000,
     });
 
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      maxAge: 7 * 24 * 60 * 60 * 1000, 
     });
 
     return res.status(200).json({
