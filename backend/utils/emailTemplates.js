@@ -8,7 +8,7 @@
  *   emailTemplates.verifyEmail(username, otp)
  *   emailTemplates.resetPasswordOtp({ username, otp })
  */
-
+ // for making this  i use AI 
 const baseWrapper = (content) => `
 <!DOCTYPE html>
 <html>
