@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 
 const Usermodel = require("../model/Usermodel");
-const Otpmodel = require("../model/Otpmodel"); // Fixed: was "../model/OtpModel" (wrong case → Linux crash)
+const Otpmodel = require("../model/Otpmodel"); 
 
 const resetPassword = async (req, res) => {
   try {
@@ -15,6 +15,7 @@ const resetPassword = async (req, res) => {
       });
     }
 
+    // use crypto for fast otp generation
     const otpHash = crypto
       .createHash("sha256")
       .update(otp.trim())
