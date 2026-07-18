@@ -12,13 +12,11 @@ const verifyUser = async (req, res) => {
     const accessToken  = req.cookies.accessToken;
     const refreshToken = req.cookies.refreshToken;
 
-    // ── Case 1: accessToken present ─────────────────────────────────────────
     if (accessToken) {
       try {
         const decoded = jwt.verify(accessToken, process.env.JWT_SECRET);
 
-        // Select ONLY the fields the frontend needs — username and email
-        // are required for the Navbar avatar and profile dropdown
+        
         const user = await Usermodel
           .findById(decoded.id)
           .select("username email verified lastLogin");
@@ -27,11 +25,11 @@ const verifyUser = async (req, res) => {
           return res.json({ status: true, user });
         }
       } catch {
-        // accessToken expired — fall through to refresh
+   
       }
     }
 
-    // ── Case 2: try refreshToken ─────────────────────────────────────────────
+
     if (refreshToken) {
       try {
         const decoded = jwt.verify(
@@ -54,7 +52,7 @@ const verifyUser = async (req, res) => {
           return res.json({ status: false });
         }
 
-        // Select username + email so navbar shows them immediately
+
         const user = await Usermodel
           .findById(decoded.id)
           .select("username email verified lastLogin");
@@ -103,7 +101,7 @@ const verifyUser = async (req, res) => {
       }
     }
 
-    // ── Case 3: no tokens ────────────────────────────────────────────────────
+  
     return res.json({ status: false });
 
   } catch (error) {
