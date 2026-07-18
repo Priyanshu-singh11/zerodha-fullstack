@@ -18,7 +18,6 @@ const refreshToken = async (req, res) => {
       });
     }
 
-    // Verify the refresh token JWT
     let decoded;
     try {
       decoded = jwt.verify(
@@ -32,7 +31,7 @@ const refreshToken = async (req, res) => {
       });
     }
 
-    // Find the session using the hashed refresh token
+
     const refreshTokenHash = crypto
       .createHash("sha256")
       .update(refreshTokenCookie)
@@ -45,8 +44,7 @@ const refreshToken = async (req, res) => {
     });
 
     if (!session) {
-      // Session not found or already revoked — possible token reuse attack
-      // Revoke ALL sessions for this user as a security measure
+      
       await Sessionmodel.updateMany(
         { user: decoded.id },
         { revoked: true, revokedAt: new Date() }
@@ -58,7 +56,6 @@ const refreshToken = async (req, res) => {
       });
     }
 
-    // Check session hasn't expired
     if (session.expiresAt < new Date()) {
       session.revoked = true;
       session.revokedAt = new Date();
@@ -70,7 +67,6 @@ const refreshToken = async (req, res) => {
       });
     }
 
-    // Generate new token pair (rotation)
     const newAccessToken = generateAccessToken({
       id: decoded.id,
       sessionId: session._id,
@@ -80,7 +76,6 @@ const refreshToken = async (req, res) => {
       sessionId: session._id,
     });
 
-    // Hash the new refresh token and update session
     const newRefreshTokenHash = crypto
       .createHash("sha256")
       .update(newRefreshToken)
@@ -99,12 +94,12 @@ const refreshToken = async (req, res) => {
 
     res.cookie("accessToken", newAccessToken, {
       ...cookieOptions,
-      maxAge: 15 * 60 * 1000, // 15 minutes
+      maxAge: 15 * 60 * 1000,
     });
 
     res.cookie("refreshToken", newRefreshToken, {
       ...cookieOptions,
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      maxAge: 7 * 24 * 60 * 60 * 1000, 
     });
 
     return res.status(200).json({
